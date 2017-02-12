@@ -1,0 +1,251 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{program}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{eso-pic}
+%\usepackage{gensymb}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{hyperref}
+
+\usepackage{xcolor}
+\definecolor{alternateKeywordsColor}{rgb}{0.13,1,0.13}
+\definecolor{keywordsColor}{rgb}{0.13,0.13,1}
+%\definecolor{commentsColor}{rgb}{0,0.5,0}
+\definecolor{commentsColor}{rgb}{0,0.5,0}
+%\definecolor{stringsColor}{rgb}{0.9,0,0}
+\definecolor{stringsColor}{rgb}{0,0,0.5}
+\definecolor{light-gray}{gray}{0.95}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+ 
+\urlstyle{same}
+
+\newcommand\floor[1]{\lfloor#1\rfloor}
+\newcommand\ceil[1]{\lceil#1\rceil}
+\newcommand{\BackgroundPic}{\put(-4,0){\parbox[b][\paperheight]{\paperwidth}{\centering\includegraphics[width=\paperwidth,height=\paperheight]{nat-farve.pdf}}}}
+
+\algnewcommand\True{\textbf{true}\space}
+\algnewcommand\False{\textbf{false}\space}
+\algdef{SE}[SUBALG]{Indent}{EndIndent}{}{\algorithmicend\ }%
+\algtext*{Indent}
+\algtext*{EndIndent}
+
+\lstdefinelanguage{console}{%
+  keywords={},
+  morekeywords={},
+  otherkeywords={},
+  basicstyle=\ttfamily\lst@ifdisplaystyle\small\fi, 
+  breaklines=true,
+  showstringspaces=false,
+  % aboveskip=0pt, 
+  % belowskip=0pt,
+  %resetmargins=true,
+  captionpos=b,
+  backgroundcolor=\color{green!10!white},
+}
+
+\begin{document} 
+	\AddToShipoutPicture*{\BackgroundPic}
+	
+	\begin{titlepage}
+		\thispagestyle{empty}
+		\vspace*{5cm}
+		\begin{center}
+			\Huge \textbf{ Interaktionsdesign } \\
+			\LARGE \textbf{Opgave 1: Målelige brugerkrav til brugsvenlighed } \\
+		\end{center}
+		\vspace*{3.5cm}
+		\begin{flushleft}
+			
+		\begin{table}[h!]
+			\begin{tabular}{lll}
+				Adam Ingwersen,& \\ Aske Fjellerup,&\\ Peter Friborg\\
+			\end{tabular}
+		\end{table}
+			
+			
+			\vspace{3mm}
+			\vspace{3mm}
+			Datalogisk  Institut\\
+			Københavns Universitet\\
+			\vspace{3mm}
+			\today\\
+			%\vspace*{0.5cm}
+			
+		\end{flushleft}
+	\end{titlepage}
+
+	\title{***}
+	\author{***}
+	
+	\newpage
+\newpage
+
+\section{Introduktion}
+Denne afleveringsopgave fremsætter en række målelige brugerkrav til websitet \href{http://enterprise.dk}{enterprise.dk}, hvor privatpersoner kan leje personbiler. De målelige krav omfatter krav til effektivitet og tilfredshed. 
+
+\section{Effektivitetskrav}
+Effektivitetskravene fokuserer på, at brugeren effektivt er i stand til at navigere på websitet på kritiske områder, hvortil brugeren skal kunne uddrage nødvendig information samt aktivt anvende websitet efter dettes primære formaål (i.e. leje en bil). Hvert krav vil have en ramme af indledende forudstæninger, der muliggør en nøgtern evaluering af brugerens respons, samt en reel opgave, brugeren skal løse. Slutteligt fremsættes er tilfredsstillende resultat, hvoraf det er klart at determinere hvorvidt effektivitetskravet er opfyldt eller ej. 
+
+\subsection{Afhenting af bil, samt aflevering samme sted}
+\subsubsection{Opgave}
+Det skal være muligt at leje en bil med specifikke krav på mindre en 10 minutter.
+
+\subsubsection{Forudsætninger}
+Kravet skal have følgende forudsætninger:
+\begin{itemize}
+    \item {Test af 20 forskellige brugere}
+    \item {Alder på minimum 19 år}
+    \item {Skal ikke have prøvet at leje en bil fra \href{http://Enterprise.dk}{Enterprise.dk} før}
+\end{itemize}
+
+\subsubsection{Kravenes omfang}
+
+\begin{itemize}
+    \item {Afhentning/aflevering af bil i København}
+    \item {Leje af bil i præcis en uge, startende $24/12-2017$}
+    \item {Bilen skal have: Automatisk gear, 4 sæder og plads til tasker}
+    \item {Udfylde chaufførinformation}
+\end{itemize}
+
+\subsubsection{Acceptabelt resultat}
+75\% af testpopulationen skal udføre følgende opgaver inden for 10 minutter.
+
+\subsection{Tilgå information om vejhjælpsservice fra smartphone}
+\subsubsection{Opgave}
+Brugeren skal være i stand til at navigere til kontaktsiden, og identificere et telefonnummer til virksomhedens vejhjælps-service. 
+
+\subsubsection{Forudsætninger}
+\begin{itemize}
+	\item Kravet efterprøves på mindst 50 deltagere 
+	\item Enhver deltager skal anvende sin private smartphone og foretrukne browser herpå
+	\item Deltagerne må ikke tidligere have gjort brug af websitet til at finde information om vejhjælp
+	\item Der differentieres ikke mellem brugere på tværs af webbrowsere/operativsystemer. Alle brugere skal være i lige god stand til at få vejhælp - uanset om der anvendes Firefox, Opera, iOS, Android, etc.
+\end{itemize}
+
+\subsubsection{Acceptabelt resultat}
+Mindst 85\% af test-populationen skal være i stand til at løse opgaven inden for 120 sekunder. 
+
+
+\subsection{Åbningstider}
+\subsubsection{Opgave}
+På 2 min skal brugerne finde åbningstiderne i København Lufthavn
+\subsubsection{Forudsætninger}
+\begin{itemize}
+	\item 25 brugere vurderer 
+	\item Brugerne er over 18 år
+	\item Brugerne har aldrig brugt \href{http://Enterprise.dk}{Enterprise.dk} før.
+\end{itemize}
+\subsubsection{Acceptabelt resultat}
+85\% af brugerne skal løse opgaven.
+\section{Tilfredshedskrav}
+\subsection{Godt overblik}
+\subsubsection{Opgave}
+Brugerne skal vurdere hvor godt overblik hjemmesiden giver over bilernes egenskaber på en skala fra 1-5. 
+\subsubsection{Forudsætninger}
+\begin{itemize}
+	\item 25 brugere deltager i forsøget
+	\item Brugerne er over 18 år
+	\item Brugerne har aldrig brugt \href{http://Enterprise.dk}{Enterprise.dk} før.
+	\item 5 er meget let, 4 er lidt let, 3 er normalt , 2 er lidt svært og 1 er meget svært.
+\end{itemize}
+25 brugere skal vurdere godt overblik der er over bilernes egenskaber på \href{http://Enterprise.dk}{Enterprise.dk}. Brugerne skal være over 18 og har aldrig brugt \href{http://Enterprise.dk}{Enterprise.dk} før.
+\subsubsection{Acceptabelt resultat}
+Mindst 80\% af 25 brugere skal vurdere 4 eller over
+
+\subsection{Udvalg af biler i København}
+\subsubsection{Beskrivelse}
+Udvalget af biler i København
+\subsubsection{Forudsætninger}
+\begin{itemize}
+    \item{25 brugere, der gennem  \href{http://Enterprise.dk}{Enterprise.dk} har lejet bil i København.}
+\end{itemize}
+
+\subsubsection{Påstand}
+Der vurderes igennem et ja/nej spørgsmål om udvalget af biler i København er tilstrækkeligt.
+
+\subsubsection{Acceptabelt resultat}
+Mindst 75\% af testpoplationen skal svare ja på spørgsmålet.
+
+\subsection{Kontakt}
+\subsubsection{Opgave}
+25 brugere skal svare ja/nej om det er nemt at finde ud af hvilket telefonnummer man skal ringe til hvis der er problemer med at leje bil
+\subsubsection{Forudsætninger}
+\begin{itemize}
+    \item{25 brugere vurderer}
+    \item  brugerne har ikke brugt \href{http://Enterprise.dk}{Enterprise.dk} før
+\end{itemize}
+\subsubsection{Acceptabelt resultat}
+85\% af bruger svarer ja
+
+\subsection{Navigation på undersitet \href{https://www.enterprise.dk/da_DK/car-rental/locations.html}{"Steder"}}
+\subsubsection{Forudsætninger}
+\begin{itemize}
+	\item Kravet efterprøves på mindst 20 deltagere
+	\item Deltagerne skal have anvendt undersitet til at finde det mest relevante biludlejningssted for dem
+	\item Deltagerne skal have foretaget en reservation ved at søge via denne menu
+\end{itemize}
+\subsubsection{Påstand}
+Envher deltager skal vurdere følgende påstande på en skala fra 1-5, hvor 1 betyder 'Helt uenig', 3 betyder 'Hverken eller' og 5 betyder 'Helt enig'. 
+
+\begin{itemize}
+	\item "Jeg var i stand til at finde et udlejningssted i den by, der var mest relevant for mig"
+\end{itemize}
+
+\subsubsection{Acceptabelt resultat}
+Mindst 70\% af brugerne skal have besvaret påstandende med et en gennemsnitlig vurdering på over 3. 
+
+\subsection{Navigation på undersitet \href{https://www.enterprise.dk/da_DK/car-rental/locations.html}{"Steder"}}
+
+\subsubsection{Forudsætninger}
+\begin{itemize}
+	\item Kravet efterprøves på mindst 20 deltagere
+	\item Deltagerne skal have anvendt undersitet til at finde det mest relevante biludlejningssted for dem
+	\item Deltagerne skal have foretaget en reservation ved at søge via denne menu
+\end{itemize}
+\subsubsection{Påstand}
+Envher deltager skal vurdere følgende påstande på en skala fra 1-5, hvor 1 betyder 'Helt uenig', 3 betyder 'Hverken eller' og 5 betyder 'Helt enig'. 
+
+\begin{itemize}
+	\item "Jeg var i stand se åbningstider samt relevant kontaktinformation inden for 4 klik"
+\end{itemize}
+
+\subsubsection{Acceptabelt resultat}
+Mindst 70\% af brugerne skal have besvaret påstandende med et en gennemsnitlig vurdering på over 3. 
+
+\subsection{Navigation på undersitet \href{https://www.enterprise.dk/da_DK/car-rental/locations.html}{"Steder"}}
+
+\subsubsection{Forudsætninger}
+\begin{itemize}
+	\item Kravet efterprøves på mindst 20 deltagere
+	\item Deltagerne skal have anvendt undersitet til at finde det mest relevante biludlejningssted for dem
+	\item Deltagerne skal have foretaget en reservation ved at søge via denne menu
+\end{itemize}
+\subsubsection{Påstand}
+Envher deltager skal vurdere følgende påstande på en skala fra 1-5, hvor 1 betyder 'Helt uenig', 3 betyder 'Hverken eller' og 5 betyder 'Helt enig'. 
+
+\begin{itemize}
+	\item "Jeg var i stand til at påbegynde en reservation umiddelbart efter at have fundet det relevante udlejningssted"
+\end{itemize}
+
+\subsubsection{Acceptabelt resultat}
+Mindst 70\% af brugerne skal have besvaret påstandende med et en gennemsnitlig vurdering på over 3. 
+
+
+
+
+\end{document}
+

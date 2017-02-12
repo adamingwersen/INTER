@@ -1,0 +1,188 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{program}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{eso-pic}
+%\usepackage{gensymb}
+\usepackage{listings}
+\usepackage{float}
+
+\usepackage{xcolor}
+\definecolor{alternateKeywordsColor}{rgb}{0.13,1,0.13}
+\definecolor{keywordsColor}{rgb}{0.13,0.13,1}
+%\definecolor{commentsColor}{rgb}{0,0.5,0}
+\definecolor{commentsColor}{rgb}{0,0.5,0}
+%\definecolor{stringsColor}{rgb}{0.9,0,0}
+\definecolor{stringsColor}{rgb}{0,0,0.5}
+\definecolor{light-gray}{gray}{0.95}
+
+\newcommand\floor[1]{\lfloor#1\rfloor}
+\newcommand\ceil[1]{\lceil#1\rceil}
+\newcommand{\BackgroundPic}{\put(-4,0){\parbox[b][\paperheight]{\paperwidth}{\centering\includegraphics[width=\paperwidth,height=\paperheight]{nat-farve.pdf}}}}
+
+\algnewcommand\True{\textbf{true}\space}
+\algnewcommand\False{\textbf{false}\space}
+\algdef{SE}[SUBALG]{Indent}{EndIndent}{}{\algorithmicend\ }%
+\algtext*{Indent}
+\algtext*{EndIndent}
+
+\lstdefinelanguage{console}{%
+  keywords={},
+  morekeywords={},
+  otherkeywords={},
+  basicstyle=\ttfamily\lst@ifdisplaystyle\small\fi, 
+  breaklines=true,
+  showstringspaces=false,
+  % aboveskip=0pt, 
+  % belowskip=0pt,
+  %resetmargins=true,
+  captionpos=b,
+  backgroundcolor=\color{green!10!white},
+}
+
+\begin{document} 
+	\AddToShipoutPicture*{\BackgroundPic}
+	
+	\begin{titlepage}
+		\thispagestyle{empty}
+		\vspace*{5cm}
+		\begin{center}
+			\Huge \textbf{ *** } \\
+			\LARGE \textbf{Aflevering *** } \\
+		\end{center}
+		\vspace*{3.5cm}
+		\begin{flushleft}
+			
+		\begin{table}[h!]
+			\begin{tabular}{lll}
+				Adam Ingwersen,& \\ Aske Fjellerup,&\\ Peter Friborg\\
+			\end{tabular}
+		\end{table}
+			
+			
+			\vspace{3mm}
+			\vspace{3mm}
+			Datalogisk  Institut\\
+			Københavns Universitet\\
+			\vspace{3mm}
+			\today\\
+			%\vspace*{0.5cm}
+			
+		\end{flushleft}
+	\end{titlepage}
+
+	\title{10g}
+	\author{Adam Frederik Ingwersen Linnemann}
+	
+	\newpage
+\newpage
+
+\section{}
+
+
+\section*{Introduktion}
+Denne gruppeopgave skal brugergrænsefladen igennem de 10 heuristikker vurderes på hjemmesiden: \href{http://enterprise.dk}{Enterprise.dk}. Der skal opskrives mellem 10 og 16 overholdelser/overtrædelser af heuristikkerne.
+\vspace*{0.5cm}\\De 10 heuristikker er opremset herunder:
+\begin{itemize}
+    \item Vis systemets tilstand
+    genkendelsestjek i søgefelt
+    click vælg sted når placeringen vælges
+    
+    
+    \item Tal brugeres sprog – Følg konventioner
+    tyve forsikring 1 og 2
+    
+    \item Lad brugeren bestemme
+    du kan undo i bestillings processen
+    
+    \item Gør det ensartet – Følg standarder
+    (målenheden taske)
+    
+    \item Forebyg fejl
+    valgmuligheder i søgefelt
+    bekræftning af valg
+    valg af dato
+    
+    \item Støt hukommelse – Vis muligheder
+    enterprise icon : link til forside
+    UELFANS
+    
+    \item Tilbyd fleksibel og effektiv betjening
+    filter af bilerne
+    
+    \item Simplificér
+    søgelinjen på forsiden
+    
+    \item Hjælp, når der er problemer
+    fejl ved bestilling
+    
+    \item Hjælp og dokumentation  
+\end{itemize}
+\newpage
+
+\section{Delopgave 1}
+\section{Delopgave 2}
+
+\section{Eksempler på overholdelse/overtrædelse af de 10 heuristikker}
+\subsection{ Vis systemets tilstand - 1}
+%kort
+Dette første billede fås, efter indtastning af navn på afhentningsstedet. Undervejs i indtastningen kommer systemet også med foreslag til søgninger.
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{Pictures/Kort.png}
+    \centering
+    \caption{Der ses et kort over det valgte afhentningssted.}
+    \label{fig:my_label}
+\end{figure}
+
+\subsection{ Vis systemets tilstand - 2}%vente tegn
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{Pictures/Taenketegn.png}
+    \centering
+    \caption{Her ses et billede af en kort pause, der gør brugeren opmærksom på at systemet skal bearbejde det indtastede.}
+    \label{fig:my_label}
+\end{figure}
+
+\subsection{ Tal brugeres sprog - 1}% tyveri forsikring
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{Pictures/Tyveriforsikring.png}
+\end{figure}
+
+\subsection{ Tal brugeres sprog - 2}%taske
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{taskeMaal.png}
+\end{figure}
+
+\subsection{ Forebyg fejl - 1} % dato
+
+
+\subsection{ Forebyg fejl - 2} % bekræft køb
+
+\subsection{ Lad brugeren bestemme}% undo
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{undo.png}
+\end{figure}
+
+\subsection{Tilbyd fleksibel og effektiv betjening}% effectiv process
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{filterSoegning.png}
+\end{figure}
+
+\subsection{Støt hukommelse}% ikke nogen besktivese
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=200]{enterpriseIcon.png}
+\end{figure}
+
+
+\section{ }
+
+\end{document}
+
