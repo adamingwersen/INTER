@@ -1,0 +1,176 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{program}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{eso-pic}
+%\usepackage{gensymb}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\definecolor{alternateKeywordsColor}{rgb}{0.13,1,0.13}
+\definecolor{keywordsColor}{rgb}{0.13,0.13,1}
+%\definecolor{commentsColor}{rgb}{0,0.5,0}
+\definecolor{commentsColor}{rgb}{0,0.5,0}
+%\definecolor{stringsColor}{rgb}{0.9,0,0}
+\definecolor{stringsColor}{rgb}{0,0,0.5}
+\definecolor{light-gray}{gray}{0.95}
+\pagenumbering{gobble}
+\newcommand\floor[1]{\lfloor#1\rfloor}
+\newcommand\ceil[1]{\lceil#1\rceil}
+\newcommand{\BackgroundPic}{\put(-4,0){\parbox[b][\paperheight]{\paperwidth}{\centering\includegraphics[width=\paperwidth,height=\paperheight]{nat-farve.pdf}}}}
+
+\algnewcommand\True{\textbf{true}\space}
+\algnewcommand\False{\textbf{false}\space}
+\algdef{SE}[SUBALG]{Indent}{EndIndent}{}{\algorithmicend\ }%
+\algtext*{Indent}
+\algtext*{EndIndent}
+
+\begin{document} 
+	\AddToShipoutPicture*{\BackgroundPic}
+	
+	\begin{titlepage}
+		\thispagestyle{empty}
+		\vspace*{5cm}
+		\begin{center}
+			\Huge \textbf{Interaktionsdesign} \\
+			\LARGE \textbf{Aflevering 6b: Drejebog - Mouseflow} \\
+		\end{center}
+		\vspace*{3.5cm}
+		\begin{flushleft}
+			
+		\begin{table}[h!]
+			\begin{tabular}{lll}
+				Adam Ingwersen&\\ GQR701\\
+			\end{tabular}
+		\end{table}
+			
+			
+			\vspace{3mm}
+			\vspace{3mm}
+			Datalogisk  Institut\\
+			Københavns Universitet\\
+			\vspace{3mm}
+			\today\\
+			%\vspace*{0.5cm}
+			
+		\end{flushleft}
+	\end{titlepage}
+
+	\title{10g}
+	\author{Adam Frederik Ingwersen Linnemann}
+	
+	\newpage
+\newpage
+
+%----- TITLE ------
+\section*{Drejebog for test af brugervenlighed, \href{http://mouseflow.com}{Mouseflow}}
+Overvåg, optag og kvanitifcér brugeradfærd på dit website. 
+
+%------ INTRODUCTION -----
+
+\section*{Indledning til testdeltager}
+Produktet, vi skal kigge på i dag er en webservice, der gør det muligt for en kunde, at identificere besøgendes adfærd på sit eget website, med det formål at forstå de besøgende bedre. 
+\\
+\\
+Jeg udfører denne test uafhængigt af produktet, hvorfor jeg er neutral og bestræber mig på, at identificere oplagte kritikpunkter ved produktets brugervenlighed. 
+\\
+\\
+Derfor beder jeg dig fremlægge din uforbeholdne mening om produktet til enhver tid. I dag er det produktet, der testes - og der er ingen dumme spørgsmål eller -kritikpunkter. Positiv feedback er ligeledes velkommen. 
+\\
+\\
+Idet jeg ønsker, at forstå din interaktion med produktet bedst muligt, vil jeg sætte pris på, at du tænker højt undervejs. 
+\\
+\\
+Til testen skal du anvende følgende informationer:
+\begin{itemize}
+	\item Website: www.mouseflow.com
+	\item Bruger: mustache@molich.dk
+	\item Password: 123456
+\end{itemize}
+\\
+\\
+Jeg vil høre dig inden vi går i gang; har du nogen spørgsmål?
+\\
+\\
+%------- BASE INFO ------
+\section*{Pre-test interview}
+\begin{enumerate}
+	\item Personlige oplysninger (Navn, Email, Alder, Adresse, Køn, Stillingsbetegnelse)  
+	\item Har du benyttet \href{http://mouseflow.com}{Mouseflow} eller lignende tjenester før?
+	\item Administrer du, eller har du eget websted?
+	\item På en skala fra 1-5, hvor aktiv bruger er du af webtjenester? (1: Aldrig, 3: En gang i ugen, 5: Hver dag)
+\end{enumerate}
+%------ TEST-TASKS -------
+\section*{Testopgaver til \href{http://mouseflow.com}{Mouseflow}}
+\begin{enumerate}
+
+\item Jeg ønsker, at forstå hvad \textbf{Mouseflow} kan hjælpe mig med. Kan jeg ud fra forsiden forstå, hvad produktet kan tilbyde?
+\item Jeg vil gerne vide, hvad de primære egenskaber ved produktet er. Hvor finder jeg det henne? Er det ligetil, at identificere, hvad produktet indeholder? Hvorfor/hvorfor ikke?
+\item Jeg ønsker at vide, om andre brugere har haft gode erfaringer med produktet. Kan jeg se, hvem der ellers er kunder ved \textbf{Mouseflow}? Kan jeg se, hvad de synes om produktet?
+\item Jeg vil gerne have en bedre fornemmelse af, hvordan produktet fungerer. Hvordan afprøver jeg produktet. Beskriv din oplevelse. Var det let at komme i gang og til at forstå? Hvorfor/hvorfor ikke?
+\item Jeg vil gerne finde ud af, hvad en \texttt{Funnel} er. Hvordan finder jeg ud af det? På hvilken type websites er det relevant at bruge det? Er det forklaret godt? Hvorfor/hvorfor ikke?
+
+\item Opret en gratis konto. Log ud af kontoen. Beskriv din oplevelse. Er det nemt? Hvorfor/hvorfor ikke?
+\item Log ind på testkontoen. Dan dig et overblik over aktiviteter på det website, Mouseflow overvåger. Hvad lægger du først mærke til? Er det til at se, hvornår den seneste optagelse har fundet sted? Beskriv din oplevelse.
+
+\item Jeg vil gerne danne mig et overblik over hvilke spørgeskemaer, der er aktive til mine besøgende på webstedet lige nu. Hvordan gør jeg? Er indholdet præsenteret på en god måde? Hvorfor/hvorfor ikke?
+\item Se historiske spørgeskema-kampagner fra Januar til Februar. Er det nemt at justere datoen? Hvorfor/hvorfor ikke?
+\item Opret en ny spørgeskema-kampagne. Tilføj 3 spørgsmål. Beskriv din oplevelse. Var det nemt at finde knappen til at oprette en ny kampagne? Var det nemt at tilføje nye spørgsmål til kampagnen? 
+\item Slet kampagnen igen. Identificér den mest besvarede spørgeskema-kampagne den sidste uge. Er det nemt at se, hvilken kampagne er mest besvaret? Beskriv, hvordan du identificerede den mest besvarede kampagne.
+
+\item Jeg vil nu gerne danne mig et overblik over, hvordan brugere navigerer på en bestemt underside: \texttt{/mustache/about.hmtl}. Beskriv, hvordan du oplever det præsenterede indhold. Er der noget godt/skidt ved måden, det bliver vist på? Hvorfor/hvorfor ikke?
+\item Hvordan finder jeg ud af, hvordan brugere fra Danmark har navigeret på samme underside i Januar måned. Beskriv, hvordan du oplever processen?  
+\end{enumerate}
+
+\section*{Post-test interview}
+
+Jeg vil nu stille dig nogle spørgsmål, hvor jeg opfordrer dig til at komme med forbedringer til tjenesten - samt din vurdering af specifikke dele af sitet.
+
+\begin{enumerate}
+
+\item Hvis du kunne ændre 2 ting ved sitet, som det er præsenteret for nye besøgende, hvad skulle det så være? Hvorfor?
+\item Beskriv, hvad der fungerede godt for nye besøgende.
+\item Hvilke elementer af navigationen efter login fungerer bedst efter din mening? Hvorfor? 
+\item Hvilke elementer af navigationen efter login fungerer dårligst efter din mening? Hvorfor?
+\item Hvis du kunne ændre noget, ved måden hvorpå \texttt{Feedback}-kampagner oprettes, hvad ville det så være? Hvorfor?
+\item Hvis du kunne ændre noget, ved måden hvorpå \texttt{Heatmaps} præsenteres og filteres på, hvad ville det så være? Hvorfor?
+\item På en skala fra 1-5, hvordan vil du vurdere din oplevelse af \textbf{Mouseflow}? (1: Ubrugelig, 3: Brugbar men besværlig, 5: Perfekt). 
+\end{enumerate}
+
+\section*{Løsninger til testopgaver}
+\begin{enumerate}
+\item Fra forsiden, rul ned; læs de første 4 sektioner.
+\item Fra forsiden, navigér til \texttt{Tour}.
+
+\item Fra forsiden, navigér til \texttt{Clients}. Her vises et overblik over de største kunder. Rul ned; her er en sekktion, hvor man kan klikke igennem reviews fra enkelte virksomheder. Det er ikke ligetil, at finde ud af, om der er virksomheder der minder om din egen har skrevet et review.
+
+\item Fra forsiden, navigér til \texttt{Demo}. Følg demoen. 
+
+\item Information om funnels findes under \texttt{Tour}. Dog forekommer det ikke klart, hvornår servicen er relevant.Det oplagte svar er her sites som f.eks. webshops, der har gavn af denne service.
+	
+\item Fra forsiden, klik på \texttt{SIGN UP NOW}. Indtast oplysninger. Under \texttt{Plan:} vælg \texttt{Free}. Tryk på \texttt{Next}.
+
+\item Log ind. Tryk på \texttt{Dashboard}. Under 2. sektion, \texttt{Recent Recordings} fremgår det, hvilken optagelse er den seneste.
+
+\item Tryk på \texttt{Feedback}. Aktive kampagner er anvist med en blå boks øverst i højre hjørne. 
+
+\item På den blå bjælke, øverst, højre hjørne er der anvist et datointerval. Klik på dette og vælg den ønskede periode.
+\item For at oprette en ny kampagne, kan man 1) Klikke på tekstfeltet markeret med et \texttt{(i) Learn how to add a new feedback campaign}, 2) Der er anført en knap blandt 'kort'-fremvisningen af kampagner, \texttt{Add new campaign}. Ved tilføjelse af en ny kampagne, kan denne navngives, og nye spørgsmål tilføjes ved at trykke \texttt{Add question}. Begge dele i undermenuen \texttt{Steps}. Herefter bedes man udfylde \texttt{Appearance, Triggers, Finalize} - brug default indstillinger. Efter kampagnen er oprettet, naviger tilbage til \{Feedback} hovedmenuen - her kan den nye kampagne ses. Tryk \texttt{Edit}. Herefter, nederst, tryk \texttt{Delete campaign}. Herefter bedes brugeren bekræfte, at denne ønsker at slette kampagnen, acceptér.  
+
+\item Navigér til \texttt{Heatmaps}. Der vises et overblik over heatmaps for alle undersider på \texttt{Mustache}-siden. Tryk på den ønskede underside. Der vises et heatmap, der angiver, hvor brugere klikker, scroller osv.
+
+\item Navigér til \texttt{Heatmaps}. Tryk på \texttt{Filter}-ikonet. Øverst, venstre hjørne af den blå bjælke, tryk \texttt{Select a filter}, en drop-down menu præsenteres, vælg \texttt{Country}. Umiddelbart til højre fra \texttt{Select a filter}, angives det ønskede land via en drop-down menu, vælg 'Denmark'. Tryk nu på \texttt{Apply}. Vælg ønskede underside på det overvågede website som før. Øverst højre hjørne vælges nu et datointerval. 
+
+\end{enumerate}
+
+
+\end{document}
+

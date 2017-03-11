@@ -1,0 +1,26 @@
+Formalia og information til deltagerne:
+
+- Lad for guds skyld være med at opstille dine opgaver i artikel format, medmindre
+det er angivet som et krav. Én kolonne med tekst er helt fint.
+
+- Information er ok, men angiv også de oplysninger I har fået udleveret til test
+kontoen, så I nemt kan give oplysningerne til test deltageren, når vedkommende skal
+logge ind under testene.
+
+Test opgaver:
+
+- Din drejebog bør indeholde løsningerne til test opgaverne også.
+
+- Flere af dine test opgaver indeholder hjælp i form af ord som heatmap og funnel.
+Dette er ikke godt, da man helst ikke skal hjælpe test deltageren på nogen måde.
+Der gælder samme problematik ang. det at nævne features og hjælpe til hvad de gør
+(her tænker jeg på "Opret en feedback-kampagne", "filtrer" og "naviger").
+
+Interview spørgsmål:
+
+Ok.
+
+
+Opgaven er ikke obligatorisk, så jeg vil ikke bede dig genaflevere opgaven, men du
+skal være opmærksom på, at hvis du ønsker feedback på en revideret udgave af denne
+opgave, skal du blot give mig besked.

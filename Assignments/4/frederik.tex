@@ -1,0 +1,161 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{program}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{eso-pic}
+%\usepackage{gensymb}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{hyperref}
+
+\usepackage{xcolor}
+\definecolor{alternateKeywordsColor}{rgb}{0.13,1,0.13}
+\definecolor{keywordsColor}{rgb}{0.13,0.13,1}
+%\definecolor{commentsColor}{rgb}{0,0.5,0}
+\definecolor{commentsColor}{rgb}{0,0.5,0}
+%\definecolor{stringsColor}{rgb}{0.9,0,0}
+\definecolor{stringsColor}{rgb}{0,0,0.5}
+\definecolor{light-gray}{gray}{0.95}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+ 
+\urlstyle{same}
+
+\newcommand\floor[1]{\lfloor#1\rfloor}
+\newcommand\ceil[1]{\lceil#1\rceil}
+\newcommand{\BackgroundPic}{\put(-4,0){\parbox[b][\paperheight]{\paperwidth}{\centering\includegraphics[width=\paperwidth,height=\paperheight]{nat-farve.pdf}}}}
+
+\algnewcommand\True{\textbf{true}\space}
+\algnewcommand\False{\textbf{false}\space}
+\algdef{SE}[SUBALG]{Indent}{EndIndent}{}{\algorithmicend\ }%
+\algtext*{Indent}
+\algtext*{EndIndent}
+
+\lstdefinelanguage{console}{%
+  keywords={},
+  morekeywords={},
+  otherkeywords={},
+  basicstyle=\ttfamily\lst@ifdisplaystyle\small\fi, 
+  breaklines=true,
+  showstringspaces=false,
+  % aboveskip=0pt, 
+  % belowskip=0pt,
+  %resetmargins=true,
+  captionpos=b,
+  backgroundcolor=\color{green!10!white},
+}
+
+\begin{document} 
+	\AddToShipoutPicture*{\BackgroundPic}
+	
+	\begin{titlepage}
+		\thispagestyle{empty}
+		\vspace*{5cm}
+		\begin{center}
+			\Huge \textbf{ Interaktionsdesign } \\
+			\LARGE \textbf{Opgave 4: Tjekliste til interview} \\
+		\end{center}
+		\vspace*{3.5cm}
+		\begin{flushleft}
+			
+		\begin{table}[h!]
+			\begin{tabular}{lll}
+				Adam Ingwersen,& \\ Aske Fjellerup,&\\ Peter Friborg\\
+			\end{tabular}
+		\end{table}
+			
+			
+			\vspace{3mm}
+			\vspace{3mm}
+			Datalogisk  Institut\\
+			Københavns Universitet\\
+			\vspace{3mm}
+			\today\\
+			%\vspace*{0.5cm}
+			
+		\end{flushleft}
+	\end{titlepage}
+
+	\title{***}
+	\author{***}
+	
+	\newpage
+\newpage
+
+\section{Introduction}
+
+Denne forberedende aflevering foreslår en række punkter, som efter gruppens overbevisning bør indgå i interviewet. 
+
+
+\section{Tjekliste}
+
+\subsection{Personlige oplysninger}
+
+\begin{itemize}
+    \item Navn: Frederik Ingwersen
+    \item Telefon: +45 30339021 
+    \item Email: frond95@gmail.com
+    \item Er der wifi på addressen? Ja/Nej: Ja
+    \item Alder og køn: 21, M
+    \item Postnummer: 1707
+    \item Bolig (Lejlighed, Villa, Bofællesskab, etc.): Bofællesskab
+    \item Tilgår du mere end 1 bolig jævnligt vhja. nøgle?: Nej
+\end{itemize}
+
+
+\subsection{Brugerens forudsætninger}
+
+\begin{itemize}
+    \item På en skala fra 1 til 5; hvor god vil du vurdere, at du er til at anvende din smartphone?: 4
+    \item Hvor ofte bruger du din smartphone dagligt? (1-2 timer, 2-5 timer, 5+ timer): 1-2 timer
+    \item Bruger du apps? I så fald hvilke bruger du oftest?: Ja. Musikapps (Spotify) 
+    \item Hvor ofte opdateres dine apps?: Automatisk - ca. dagligt.
+    \item Hvor ofte løber din telefon tør for strøm, mens du er ude af huset?: Stortset aldrig. Hver 2. måned. 
+    \item Hvad ville du gøre, hvis du glemte din nøgler?: Kontakte bofælle.
+\end{itemize}
+
+\subsection{Anskuelse af behov}
+
+\begin{itemize}
+    \item Hvor mange hus-/bolignøgler har du? Gemmer du nøgler i f.eks. sommerhus, etc?: 1. Nej. 
+    \item Har du prøvet at glemme dine nøgler? Nej.
+    \item Bekymrer du dig om at glemme dine nøgler - f.eks. om morgenen? Ja. Jeg udfører en rutine, hvor jeg tjekker mine lommer hver morgen.
+    \item Låner du dine nøgler ud fra tid til anden? Ja. 
+    \item Låner du nøgler af andre fra tid til anden? Ja, en sjælden gang imellem.
+    \item Hvordan sikrer du dig, at dine døre er låst, når du forlader bolig? Smæklås.
+    \item Har du alarmsystem monteret i bolig? Hvilket? Og kan det bruges til at se status via f.eks. smartphone? Nej.
+\end{itemize}
+
+
+\subsection{Spørgsmål til produkt}
+\begin{itemize}
+    \item Hvad kunne få dig til at erstatte dine fysiske nøgler med nyere teknologi? Hvis det var gratis. 
+    \item Hvilke faktorer er af højest beytydning for dig, hvis du skulle anvende et digitalt produkt til at sikre din bolig? (F.eks. sikkerhed, overvågning, forsikringsforhold, nem betjening..) At det ikke er forbundet til et netværk. At der er god kryptering. Det skal være software, jeg kan stole på. 
+    \item Hvilke begrænsninger er det vigtigt, at produktet har? Man må ikke kunne tilgå produktet online. 
+    \item Hvilke af nedenstående features virker tiltalende? 
+    \begin{itemize}
+        \item Genereŕ midlertidige nøgler til f.eks. kæreste, lejere (f.eks. AirBnB) af predefineret varighed, f.eks. 24 timer. Det lyder smart - er bekymret om sikkerhed. 
+        \item Sikring af nøglebundet via fingeraftryk på telefon? Ikke overbevist. 
+        \item Lave delte nøglebundter til familie og bofæller? Lyder smart til sommerhus. Midlertidige nøgler lyder bedre.
+        \item Historisk oversigt over hvor, hvornår og af hvem nøglerne er blevet brugt? Ja. Især smart hvis der er mange, der tilgår boligen.
+        \item Kunne udlevere en nøgle til en person, du ikke er fysisk i nærheden af - hvis du sidder på arbejde, ferie osv? Ja, er bekymret om sikkerhed.
+        \item Øget sikkerhed ifht. fysiske nøgler, ifm. af password for at kunne anvende? Det er utvivlsomt sikrere. 
+    \end{itemize}
+    \item Har du nogle bekymringer ifht. dette produkt? Netværksforbundet. 
+    \item Hvad ville give dig større tryghedsfølelse? At nøglebundet kun lå lokalt på en telefon? Eller, at app'en gemmer al information for dig i skyen? Andet? Lokalt
+    \item Tror du, produktet kan spare dig tid i din hverdag? Nej, tværtimod. 
+\end{itemize}
+\end{document}
+
